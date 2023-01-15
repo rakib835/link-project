@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;
+}
+.wrapper{
+    width: 100%;
+    height: 80vh;
+    background-image: url(images/our-team.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.logo img{
+    width: 100px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    position: fixed;
+    right: 0;
+    z-index: 1000;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 10px;
+}
+nav ul li a{
+    font-size: 15px;
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+}
+nav ul li a:hover{
+    color: #ed31b8;
+}
+nav ul li a::after{
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ed31b8;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.menu-icon{
+    display: none;
+}
+.text{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 10%;
+}
+.text h1{
+    font-size: 6rem;
+    color: #fff;
+    position: relative;
+}
+.text h1::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #ed31b8;
+    left: 0;
+    bottom: -10px;
+}
+.text p{
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.about{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap: 30px;
+    padding: 5rem 10%;
+}
+.content h4{
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #ed31b8;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+.content h2{
+    font-size: 30px;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    position: relative;
+}
+.content h2::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 0.7px;
+    background: #777;
+    left: 0;
+    bottom: -10px;
+}
+.about-img img{
+    width: 100%;
+    opacity: 1;
+}
+.about-img:hover img{
+    opacity: 0.7;
+}
+.content p{
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #777;
+    font-weight: bold;
+    position: relative;
+}
+.content p::after{
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 2px;
+    background: #ed31b8;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 10px;
+}
+
+
+
+.footer-box{
+    display:flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 7rem 10%;
+    width: 100%;
+    background: #10093c;
+    color: #fff;
+}
+.footer-left, .footer-right{
+    flex-basis: 50%;
+}
+.footer-right img{
+    width: 100%;
+}
+.footer-left{
+    line-height: 40px;
+}
+.footer-left h2{
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.footer-left h5{
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.footer-left h4{
+    margin-top: 20px;
+    font-size: 20px;
+    position: relative;
+    display: inline-block;
+}
+.footer-left h4::after{
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -40px;
+}
+.footer-line{
+    display: flex;
+    align-items: center;
+}
+.line-text li{
+    display: inline-block;
+    list-style: none;
+    margin-right: 15px;
+}
+.line-text li a{
+    text-decoration: none;
+    font-size: 15px;
+    margin-top: 20px;
+    display: inline-block;
+    color: #fff;
+    right: 10px;
+}
+
+@media(max-width:770px){
+    nav ul{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        background: #10093c;
+    }
+    nav ul li{
+        display: block;
+        margin: 1rem;
+        padding: 1rem;
+    }
+    nav ul li a{
+        font-size: 30px;
+        text-transform: capitalize;
+        color: #fff;
+    }
+    .menu-icon{
+        display: block;
+        color: #333;
+        font-size: 25px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .active{
+        margin-top: -100vh;
+    }
+    .logo img{
+        width: 150px;
+    }
+    .text p{
+        font-size: 15px;
+    }
+    .footer-left, .footer-right{
+        flex-basis: 100%;
+    }
+    .footer-right{
+        margin-top: 20px;
+    }
+    .text h1{
+        font-size: 50px;
+    }
+}

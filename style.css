@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    height: 100vh;
+}
+.logo img{
+    width: 100px;
+}
+.menu-icon{
+    display: none;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 1000;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+nav ul li a{
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #333;
+    position: relative;
+}
+nav ul li a:hover{
+    color: #ed31b8;
+}
+nav ul li a::after{
+    width: 0%;
+    height: 1px;
+    position: absolute;
+    content: '';
+    background: #ed31b8;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.text{
+    display: flex;
+    padding: 8rem 10%;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.col-1, .col-2{
+    flex-basis: 45%;
+}
+.col-1 h4{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ed31b8;
+}
+.col-1 h2{
+    font-size: 40px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #777;
+}
+.col-2{
+    line-height: 35px;
+}
+.col-2 span{
+    font-weight: bolder;
+    color: #000;
+    font-size: 15px;
+}
+.col-2 p{
+    text-align: right;
+}
+hr{
+    width: 80%;
+    margin: auto;
+    height: 0.7px;
+    background: #777;
+    border: none;
+}
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 10%;
+    flex-wrap: wrap;
+}
+.left-col, .right-col{
+    flex-basis: 48%;
+}
+.right-col img{
+    width: 100%;
+    border-radius: 5px;
+}
+.left-col p{
+    font-size: 16px;
+    text-align: left;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+.left-col h4{
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    margin-left: 40px;
+}
+.left-col h4::before{
+    position: absolute;
+    content: '';
+    width: 35px;
+    height: 1px;
+    background: #ed31b8;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -40px;
+}
+.footer-box{
+    display:flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 7rem 10%;
+    width: 100%;
+    background: #10093c;
+    color: #fff;
+}
+.footer-left, .footer-right{
+    flex-basis: 50%;
+}
+.footer-right img{
+    width: 100%;
+}
+.footer-left{
+    line-height: 40px;
+}
+.footer-left h2{
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.footer-left h5{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.footer-left h4{
+    margin-top: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+.footer-left h4::after{
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -40px;
+}
+.footer-line{
+    display: flex;
+    align-items: center;
+}
+.line-text li{
+    display: inline-block;
+    list-style: none;
+    margin-right: 15px;
+}
+.line-text li a{
+    text-decoration: none;
+    font-size: 15px;
+    margin-top: 20px;
+    display: inline-block;
+    color: #fff;
+    right: 10px;
+}
+@media(max-width:770px){
+    nav ul{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        background: #10093c;
+    }
+    nav ul li{
+        display: block;
+        margin: 1rem;
+        padding: 1rem;
+    }
+    nav ul li a{
+        text-transform: capitalize;
+        font-size: 30px;
+        color: #fff;
+    }
+    .col-1, .col-2{
+        flex-basis: 100%;
+    }
+    .col-2 p{
+        text-align: left;
+        margin-top: 40px;
+        font-size: 17px;
+    }
+    .left-col p{
+        font-size: 20px;
+    }
+    .left-col, .right-col{
+        flex-basis: 100%;
+        margin-top: 40px;
+    }
+    .menu-icon{
+        display: flex;
+        color: #333;
+        font-weight: bold;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .logo img{
+        width: 200px;
+    }
+    .footer-left, .footer-right{
+        flex-basis: 100%;
+    }
+    .footer-right{
+        margin-top: 40px;
+    }
+    .navbar{
+        transition: 0.5s;
+    }
+    .active{
+        margin-top: -100vh;
+    }
+    
+}
